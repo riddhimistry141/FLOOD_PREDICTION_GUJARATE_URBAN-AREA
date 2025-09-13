@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dataset Comparison - India vs Gujarat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); min-height: 100vh;">
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><i class="bi bi-droplet-half"></i> Flood Predictor</a>
+        <div>
+          <a class="nav-link d-inline" href="/">Home</a>
+          <a class="nav-link d-inline" href="/compare">Compare</a>
+          <a class="nav-link d-inline" href="/gujarat_flood_map1">Map</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="text-center mb-4"><i class="bi bi-bar-chart"></i> India vs Gujarat Flood Risk Comparison</h2>
+        
+        <!-- Dataset Summary Cards -->
+        <div class="row text-center mb-4">
+            <div class="col-md-6">
+                <div class="card shadow-sm border-primary">
+                    <div class="card-body">
+                        <h4 class="text-primary"><i class="bi bi-globe"></i> India Dataset</h4>
+                        <div class="table-responsive">
+                            {{ india_stats | safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card shadow-sm border-success">
+                    <div class="card-body">
+                        <h4 class="text-success"><i class="bi bi-map"></i> Gujarat Dataset</h4>
+                        <div class="table-responsive">
+                            {{ gujarat_stats | safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Chart -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-body text-center">
+                <h4 class="mb-3"><i class="bi bi-graph-up"></i> Flood Risk Trends</h4>
+                <p class="text-muted">This chart compares flood trends between Gujarat and the entire India dataset.</p>
+                <img src="{{ url_for('static', filename='comparison_plot.png') }}" width="80%" alt="Comparison Plot" class="rounded shadow">
+            </div>
+        </div>
+
+        <!-- Insights -->
+        <div class="card shadow-sm p-3 mb-4">
+            <h5 class="mb-2"><i class="bi bi-lightbulb"></i> Insights</h5>
+            <ul>
+                <li>India dataset provides a national-scale flood risk distribution.</li>
+                <li>Gujarat dataset shows localized urban flood risks, which may have fewer but more concentrated flood events.</li>
+                <li>Comparing them helps understand how Gujarat fits into the national flood risk pattern.</li>
+            </ul>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-secondary"><i class="bi bi-house"></i> Back to Home</a>
+            <a href="/gujarat_flood_map" class="btn btn-primary"><i class="bi bi-geo-alt"></i> View Gujarat Flood Map</a>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+      <small>© 2025 Gujarat Flood Prediction </small>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

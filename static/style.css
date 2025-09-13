@@ -1,0 +1,124 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffffcc;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background: #fff;
+  margin-bottom: 24px;
+}
+
+.navbar {
+  background: #1976d2;
+  padding: 12px 0;
+  margin-bottom: 0;
+  border-bottom: 2px solid #1565c0;
+}
+
+.navbar a {
+  color: #fff !important;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  color: #90caf9 !important;
+  text-decoration: underline;
+}
+
+h2, h3, h4 {
+  color: #1976d2;
+  font-weight: 600;
+}
+
+form {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #1976d2;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 18px 0;
+  border-radius: 6px;
+  border: 1px solid #b3c6d1;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px #90caf9;
+}
+
+button, .btn-primary {
+  background: #1976d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+button:hover, .btn-primary:hover {
+  background: #1565c0;
+}
+
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.result img {
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.badge.bg-danger {
+  background-color: #e53935 !important;
+}
+.badge.bg-success {
+  background-color: #43a047 !important;
+}
+
+footer {
+  color: #888;
+  margin-top: 40px;
+  font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .container {
+    max-width: 98vw;
+    padding: 10px;
+  }
+  .navbar a {
+    margin: 0 8px;
+    font-size: 1rem;
+  }
+}
